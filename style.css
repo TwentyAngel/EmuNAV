@@ -1,0 +1,89 @@
+body {
+    background-color: #e0f2f7; /* Un azul claro más agradable */
+    color: #333; /* Color de texto más oscuro para mayor contraste */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
+    margin: 20px;
+    padding: 20px;
+    text-align: center; /* Centra el texto y elementos de bloque por defecto */
+}
+
+h1 {
+    color: #007bff; /* Un azul vibrante para el título */
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.controls-details {
+    background-color: #ffffff; /* Fondo blanco para los detalles */
+    border: 1px solid #cce5ff; /* Borde suave */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px auto; /* Centrar y añadir espacio */
+    max-width: 700px; /* Ancho máximo para los detalles */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: left; /* Alineación de texto a la izquierda dentro de los detalles */
+}
+
+.controls-details summary {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0056b3; /* Color azul oscuro para el resumen */
+    cursor: pointer;
+    margin-bottom: 15px; /* Espacio debajo del resumen */
+}
+
+.controls-details ul {
+    list-style-type: none; /* Quitar viñetas predeterminadas */
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.controls-details li {
+    background-color: #f0f8ff; /* Fondo ligeramente azul para cada elemento de la lista */
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #007bff; /* Barra azul a la izquierda */
+}
+
+.controls-details p strong {
+    color: #0056b3; /* Color para las etiquetas fuertes */
+}
+
+.note {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+    margin-top: -5px; /* Ajuste para acercar a los ítems */
+    margin-bottom: 15px;
+}
+
+.videogame-container {
+    width: calc(600px * 1.8); /* Ancho del iframe escalado */
+    height: calc(400px * 1.8); /* Alto del iframe escalado */
+    margin: 50px auto; /* Centrar el contenedor horizontalmente y añadir espacio arriba */
+    position: relative; /* Necesario para que el iframe escalado no afecte el flujo */
+    overflow: hidden; /* Oculta cualquier parte del iframe que se desborde del contenedor */
+    border: 5px solid #007bff; /* Borde alrededor del contenedor */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.videogame {
+    /* Quitamos el transform-origin y transform-origin del iframe */
+    width: 100%; /* El iframe ocupa todo el ancho del contenedor */
+    height: 100%; /* El iframe ocupa todo el alto del contenedor */
+    transform: scale(1.8); /* Aplicamos la escala al iframe */
+    transform-origin: 0 0; /* Aseguramos que la escala se haga desde la esquina superior izquierda del iframe dentro de su contenedor */
+    position: absolute; /* Para que la escala no afecte el flujo del contenedor */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.8); /* Centrar y escalar */
+    /* Eliminamos el borde y box-shadow de aquí, ya que los aplicamos al contenedor */
+    margin-top: 0; /* Ya no es necesario un margen superior aquí */
+}
